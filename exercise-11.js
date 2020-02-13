@@ -19,7 +19,7 @@ function shoppingTime(memberId, money) {
     if ((money - totalBlanja)  >= 50000 ) {
       if (barang[i][1] <= (money - totalBlanja)) {
         totalBlanja += barang[i][1];
-        listPurchased.push([barang[i][0]]);
+        listPurchased.push(barang[i][0]);
       }
     } else {
       break;
