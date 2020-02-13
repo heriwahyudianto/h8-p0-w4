@@ -8,7 +8,6 @@ function deepSum (arr) {
     for (j = 0; j < arr[i].length; j++) {
       for (k = 0; k < arr[i][j].length; k++) {
         jumlah += arr[i][j][k];
-        //console.log(arr[i][j][k]);
       }
     }
   }

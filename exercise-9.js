@@ -1,24 +1,26 @@
 function checkAB(num) {
   // you can only write your code here!
-  let indexA, indexB;
-  for (j = 0; j < num.length; j++) {
-    if (num[j] === 'a') {
-      indexA = j;
-      break;
+  let indexA = [], indexB =[];
+  let isJarak3 = false;
+  for(i = 0; i < num.length; i++){
+    if(num[i] === 'a'){
+        indexA.push(i);
+    }
+    if(num[i] === 'b'){
+        indexB.push(i);
     }
   }
-  for (j = 0; j < num.length; j++) {
-    if (num[j] === 'b' && j > indexA) {
-      indexB = j;
-      break;
+  for(i = 0; i < indexA.length; i++){
+    for(j = 0; j < indexB.length; j++){
+      if (indexA[i] > indexB[j] && indexA[i] - indexB[j] === 4) {
+        isJarak3 = true;
+      }
+      if (indexA[i] < indexB[j] && indexB[j] - indexA[i] === 4) {
+        isJarak3 = true;
+      }
     }
   }
-  if (indexB === undefined) {
-    return false;
-  }
-  if (indexB - indexA > 1 && indexB - indexA <= 4) {
-    return true;
-  }
+  return isJarak3;
 }
 
 // TEST CASES
