@@ -3,21 +3,22 @@ function changeMe(arr) {
   if (arr.length === 0) {
     return '""';
   }
-  let siswa = [];
+  let siswa;
   for (i = 0; i < arr.length; i++){
-    siswa.push({
+    console.log(`${i+1}. ${arr[i][0]} ${arr[i][1]}`);  
+    siswa = {
       firstName: arr[i][0],
       lastName: arr[i][1],
       gender: arr[i][2],
       age: (arr[i][3] === undefined) ? 'Invalid Birth Year' : 2020 - arr[i][3]
-    });
+    };
+    console.log(siswa);
   }
-  console.log(siswa);
-  //return siswa;
 }
 
 // TEST CASES
-changeMe([['Christ', 'Evans', 'Male', 1982], ['Robert', 'Downey', 'Male']]); // 1. Christ Evans:
+changeMe([['Christ', 'Evans', 'Male', 1982], ['Robert', 'Downey', 'Male']]); 
+// 1. Christ Evans:
 // { firstName: 'Christ',
 //   lastName: 'Evans',
 //   gender: 'Male',
